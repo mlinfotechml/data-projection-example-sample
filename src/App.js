@@ -3,22 +3,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container } from "react-bootstrap";
 import IdCard from "./pages/IdCard";
 import StudentList from "./pages/StudentList";
-import BillView from "./pages/BillView";
 
 function App() {
-  const [page, setPage] = useState("id");
+  const [page, setPage] = useState("el");
 
   return (
     <div>
       <div>
         <div>
-          <Button
-            onClick={() => {
-              setPage("id");
-            }}
-          >
-            ID Card
-          </Button>
           <Button
             onClick={() => {
               setPage("el");
@@ -28,10 +20,10 @@ function App() {
           </Button>
           <Button
             onClick={() => {
-              setPage("bill");
+              setPage("db");
             }}
           >
-            Bill View
+            Dashboard
           </Button>
         </div>
       </div>
@@ -39,12 +31,10 @@ function App() {
       <Container>
         {(() => {
           switch (page) {
-            case "id":
-              return <IdCard />;
             case "el":
+              return <IdCard />;
+            case "db":
               return <StudentList />;
-            case "bill":
-              return <BillView />;
             default:
               return null;
           }
