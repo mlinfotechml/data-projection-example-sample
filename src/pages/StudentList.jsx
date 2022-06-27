@@ -1,5 +1,5 @@
-import React from "react";
+import StudentsTable from "./StudentsTable";
 
 export default function StudentList() {
-  return <div>Student</div>;
+  return <StudentsTable />;
 }

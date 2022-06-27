@@ -1,0 +1,28 @@
+.cardContainer {
+  height: 200px;
+  width: 100%;
+  border: solid 1px black;
+  border-radius: 8px;
+}
+
+.cardContainer div:first-child {
+  /* border-bottom: solid 1px black; */
+  background-color: #eeeeee;
+  padding: 8px;
+}
+
+.cardContainer div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+
+.cardContainer div:last-child p:first-child {
+  font-size: 24px;
+}
+
+.cardContainer div:last-child p:last-child {
+  font-size: 48px;
+}

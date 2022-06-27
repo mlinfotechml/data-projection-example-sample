@@ -1,0 +1,19 @@
+.billView > div {
+  border: solid 1px black;
+}
+
+.nameAndMail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameAndMail div:last-child {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.nameAndMail div:last-child p:first-child {
+  margin-right: 16px;
+}
