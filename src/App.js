@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button, Container } from "react-bootstrap";
-import IdCard from "./pages/IdCard";
 import StudentList from "./pages/StudentList";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
-  const [page, setPage] = useState("el");
+  const [page, setPage] = useState("sl");
 
   return (
     <div>
@@ -13,7 +13,7 @@ function App() {
         <div>
           <Button
             onClick={() => {
-              setPage("el");
+              setPage("sl");
             }}
           >
             Student List
@@ -31,10 +31,10 @@ function App() {
       <Container>
         {(() => {
           switch (page) {
-            case "el":
-              return <IdCard />;
-            case "db":
+            case "sl":
               return <StudentList />;
+            case "db":
+              return <Dashboard />;
             default:
               return null;
           }
