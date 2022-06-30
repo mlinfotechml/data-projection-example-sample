@@ -10,7 +10,9 @@ function App() {
   return (
     <div>
       <div>
-        <div>
+        <div style={{
+          margin:"15px"
+        }}>
           <Button
             onClick={() => {
               setPage("sl");
@@ -19,6 +21,9 @@ function App() {
             Student List
           </Button>
           <Button
+            style={{
+              marginLeft:"15px"
+            }}
             onClick={() => {
               setPage("db");
             }}
